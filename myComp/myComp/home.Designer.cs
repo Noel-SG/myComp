@@ -45,8 +45,16 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtFLDProcessorManufacturer = new System.Windows.Forms.TextBox();
+            this.txtFLDProcessorCount = new System.Windows.Forms.TextBox();
+            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.grpGeneralInformation.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAbout
@@ -85,7 +93,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 100);
+            this.label5.Location = new System.Drawing.Point(15, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 14);
             this.label5.TabIndex = 13;
@@ -94,7 +102,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 125);
+            this.label4.Location = new System.Drawing.Point(15, 123);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(127, 14);
             this.label4.TabIndex = 12;
@@ -176,7 +184,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 77);
+            this.label3.Location = new System.Drawing.Point(15, 75);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 14);
             this.label3.TabIndex = 2;
@@ -185,7 +193,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 53);
+            this.label2.Location = new System.Drawing.Point(15, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 14);
             this.label2.TabIndex = 1;
@@ -218,7 +226,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.resetAllDataToolStripMenuItem,
-            this.toolStripSeparator1});
+            this.toolStripSeparator1,
+            this.toolStripComboBox1});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -228,13 +237,13 @@
             // resetAllDataToolStripMenuItem
             // 
             this.resetAllDataToolStripMenuItem.Name = "resetAllDataToolStripMenuItem";
-            this.resetAllDataToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.resetAllDataToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.resetAllDataToolStripMenuItem.Text = "Reset all data";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(178, 6);
             // 
             // viewToolStripMenuItem
             // 
@@ -272,11 +281,87 @@
             this.button1.Text = "Print ";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtFLDProcessorCount);
+            this.groupBox1.Controls.Add(this.txtFLDProcessorManufacturer);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Location = new System.Drawing.Point(484, 35);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(403, 89);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Processor Information";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 14);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Process model:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 51);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 14);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Processor counter:";
+            // 
+            // txtFLDProcessorManufacturer
+            // 
+            this.txtFLDProcessorManufacturer.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtFLDProcessorManufacturer.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFLDProcessorManufacturer.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFLDProcessorManufacturer.Location = new System.Drawing.Point(152, 26);
+            this.txtFLDProcessorManufacturer.Name = "txtFLDProcessorManufacturer";
+            this.txtFLDProcessorManufacturer.ReadOnly = true;
+            this.txtFLDProcessorManufacturer.ShortcutsEnabled = false;
+            this.txtFLDProcessorManufacturer.Size = new System.Drawing.Size(245, 17);
+            this.txtFLDProcessorManufacturer.TabIndex = 14;
+            // 
+            // txtFLDProcessorCount
+            // 
+            this.txtFLDProcessorCount.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtFLDProcessorCount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFLDProcessorCount.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFLDProcessorCount.Location = new System.Drawing.Point(152, 49);
+            this.txtFLDProcessorCount.Name = "txtFLDProcessorCount";
+            this.txtFLDProcessorCount.ReadOnly = true;
+            this.txtFLDProcessorCount.ShortcutsEnabled = false;
+            this.txtFLDProcessorCount.Size = new System.Drawing.Size(245, 17);
+            this.txtFLDProcessorCount.TabIndex = 17;
+            // 
+            // toolStripComboBox1
+            // 
+            this.toolStripComboBox1.Name = "toolStripComboBox1";
+            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+            this.toolStripComboBox1.Click += new System.EventHandler(this.toolStripComboBox1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(93, 448);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 25);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Exit";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 485);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grpGeneralInformation);
             this.Controls.Add(this.btnAbout);
@@ -292,6 +377,8 @@
             this.grpGeneralInformation.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +408,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtFLDUsrLogged;
         private System.Windows.Forms.TextBox txtFLDOSPlatform;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.TextBox txtFLDProcessorCount;
+        private System.Windows.Forms.TextBox txtFLDProcessorManufacturer;
+        private System.Windows.Forms.Button button2;
     }
 }
